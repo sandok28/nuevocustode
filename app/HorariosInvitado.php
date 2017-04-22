@@ -3,8 +3,12 @@
 namespace App;
 
 use Illuminate\Database\Eloquent\Model;
+use OwenIt\Auditing\Auditable;
+use OwenIt\Auditing\Contracts\Auditable as AuditableContract;
 
-class horarios_invitado extends Model
+class HorariosInvitado extends Model implements AuditableContract
 {
+    use Auditable;
+
     //
 }
