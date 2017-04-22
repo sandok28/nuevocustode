@@ -11,6 +11,8 @@
 |
 */
 
+
+
 $app = new Illuminate\Foundation\Application(
     realpath(__DIR__.'/../')
 );
@@ -41,6 +43,7 @@ $app->singleton(
     App\Exceptions\Handler::class
 );
 
+
 /*
 |--------------------------------------------------------------------------
 | Return The Application
@@ -53,3 +56,7 @@ $app->singleton(
 */
 
 return $app;
+$app->register(OwenIt\Auditing\AuditingServiceProvider::class);
+$app->withFacades();
+
+$app->withEloquent();

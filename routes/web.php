@@ -11,6 +11,7 @@
 |
 */
 
-Route::get('/', function () {
-    return view('welcome');
-});
+
+Route::get('/','IndexController@index');
+Route::get('/Funcionarios','FuncionariosController@vistaFuncionarios');
+Route::resource('usuario','UsuariosController');

@@ -77,9 +77,9 @@
                 </div>
             @endif
 
-            <div class="content">
-                <div class="title m-b-md">
-                    Laravel
+            <div class="text-left  ">
+                <div class="text-left">
+                    Cambiando cosashhhhhhh
                 </div>
 
                 <div class="links">
