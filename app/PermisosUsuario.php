@@ -6,7 +6,7 @@ use Illuminate\Database\Eloquent\Model;
 use OwenIt\Auditing\Auditable;
 use OwenIt\Auditing\Contracts\Auditable as AuditableContract;
 
-class Permisos_usuario extends Model implements AuditableContract
+class PermisosUsuario extends Model implements AuditableContract
 {
     use Auditable;
 
