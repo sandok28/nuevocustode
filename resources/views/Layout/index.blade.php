@@ -1,100 +1,211 @@
-
-<!DOCTYPE html>
+<!doctype html>
 <html lang="en">
 <head>
-  <title>Bootstrap Example</title>
-  <meta charset="utf-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1">
-  {!! Html::style('css/bootstrap.min.css') !!}
-  {!! Html::style('css/flexboxgrid.css') !!}
-  {!! HTML::script('js/jquery.min.js') !!}
-  {!! HTML::script('js/bootstrap.min.js') !!}
+  <meta charset="utf-8" />
+  <link rel="icon" type="image/png" href="img/favicon.ico">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1" />
 
-  <style>
-    /* Remove the navbar's default margin-bottom and rounded borders */
-    .navbar {
-    margin-bottom: 0;
-      border-radius: 0;
-    }
+  <title>Light Bootstrap Dashboard by Creative Tim</title>
 
-    /* Set height of the grid so .sidenav can be 100% (adjust as needed) */
-    .row.content {height: 450px}
+  <meta content='width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0' name='viewport' />
+  <meta name="viewport" content="width=device-width" />
 
-    /* Set gray background color and 100% height */
-    .sidenav {
-    padding-top: 20px;
-      background-color: #f1f1f1;
-      height: 100%;
-    }
 
-    /* Set black background color, white text and some padding */
-    footer {
-    background-color: #555;
-      color: white;
-      padding: 15px;
-    }
+  <!-- Bootstrap core CSS     -->
+  <link href="css/bootstrap.min.css" rel="stylesheet" />
 
-    /* On small screens, set height to 'auto' for sidenav and grid */
-    @media screen and (max-width: 767px) {
-    .sidenav {
-        height: auto;
-        padding: 15px;
-      }
-      .row.content {height:auto;}
-    }
-  </style>
+  <!-- Animation library for notifications   -->
+  <link href="css/animate.min.css" rel="stylesheet"/>
+
+  <!--  Light Bootstrap Table core CSS    -->
+  <link href="css/light-bootstrap-dashboard.css" rel="stylesheet"/>
+
+
+  <!--  CSS for Demo Purpose, don't include it in your project     -->
+  <link href="css/demo.css" rel="stylesheet" />
+
+
+  <!--     Fonts and icons     -->
+  <link href="http://maxcdn.bootstrapcdn.com/font-awesome/4.2.0/css/font-awesome.min.css" rel="stylesheet">
+  <link href='http://fonts.googleapis.com/css?family=Roboto:400,700,300' rel='stylesheet' type='text/css'>
+  <link href="css/pe-icon-7-stroke.css" rel="stylesheet" />
+
 </head>
 <body>
 
-<nav class="navbar navbar-inverse">
-  <div class="container-fluid">
-    <div class="navbar-header">
-      <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#myNavbar">
-        <span class="icon-bar"></span>
-        <span class="icon-bar"></span>
-        <span class="icon-bar"></span>
-      </button>
+<div class="wrapper">
+  <div class="sidebar" data-color="AZURE" data-image="img/sidebar-5.jpg">
 
-    </div>
-    <div class="collapse navbar-collapse" id="myNavbar">
-      <ul class="nav navbar-nav navbar-right">
-          <a class="navbar-brand" href="#">Funcionario</a>
-          <li style="width: 50px; height: 50px; border: 3px solid white;"></li>
-        <li><a href="#"><span class="glyphicon glyphicon-log-in"></span> Login</a></li>
-          <li><a href="#"><span class="glyphicon glyphicon-log-out"></span> Logout</a></li>
+    <!--
+
+        Tip 1: you can change the color of the sidebar using: data-color="blue | azure | green | orange | red | purple"
+        Tip 2: you can also add an image using data-image tag
+
+    -->
+
+    <div class="sidebar-wrapper">
+      <div class="logo">
+        <a href="" class="simple-text">
+          CUSTODE
+        </a>
+      </div>
+
+      <ul class="nav">
+        <li>
+          <a href="/Funcionarios">
+            <i class="pe-7s-user"></i>
+            <p>INVITADOS</p>
+          </a>
+        <li>
+          <a href="typography.html">
+            <i class="pe-7s-user"></i>
+            <p>FUNCIONARIOS</p>
+          </a>
+        </li>
+        <li>
+          <a href="table.html">
+            <i class="pe-7s-door-lock"></i>
+            <p>PUERTAS</p>
+          </a>
+        </li>
+        <li>
+          <a href="maps.html">
+            <i class="pe-7s-plus"></i>
+            <p>PERMISOS</p>
+          </a>
+        </li>
+        <li>
+          <a href="notifications.html">
+            <i class="pe-7s-clock"></i>
+            <p>ASIGNACIÓN DE HORARIOS</p>
+          </a>
+        </li>
+        <li>
+          <a href="icons.html">
+            <i class="pe-7s-menu"></i>
+            <p>GESTION DE AREAS</p>
+          </a>
+        </li>
+        <li>
+          <a href="notifications.html">
+            <i class="pe-7s-menu"></i>
+            <p>GESTION DE USUARIOS</p>
+          </a>
+        </li>
+        <li>
+          <a href="notifications.html">
+            <i class="pe-7s-menu"></i>
+            <p>GESTION DE INVITADOS</p>
+          </a>
+        </li>
+        <li class="active">
+          <a href="/estadisticas">
+            <i class="pe-7s-graph"></i>
+            <p>ESTADISTICAS</p>
+          </a>
+        </li>
+        <li>
+          <a href="notifications.html">
+            <i class="pe-7s-bell"></i>
+            <p>AUDITORIAS</p>
+          </a>
+        </li>
       </ul>
     </div>
   </div>
-</nav>
 
-<div class="container-fluid text-left">
-  <div class="row content">
-    <div class="col-sm-2 sidenav">
-      <p><a href="/Funcionarios">Funcionarios</a></p>
-      <p><a href="#">Secciones y Cargos</a></p>
-        <p><a href="#">Invitados</a></p>
-        <p><a href="#">Usuario</a></p>
-        <p><a href="#">Horarios</a></p>
-        <p><a href="#">Licencias</a></p>
-        <p><a href="#">Gestion de Areas</a></p>
-        <p><a href="#">Control de Areas</a></p>
-        <p><a href="#">Estadisticas</a></p>
-        <p><a href="#">Auditoria</a></p>
-        <p><a href="#">Reportes</a></p>
-        <p><a href="#">Ahorro de Energia</a></p>
-      <p><a href="#"></a></p>
-    </div>
-    <div class="col-sm-8 text-left">
-        @yield('content')
-        <p>Lorem</p>
-    </div>
+  <div class="main-panel">
+    <nav class="navbar navbar-default navbar-fixed">
+      <div class="container-fluid">
+        <div class="navbar-header">
+          <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#navigation-example-2">
+            <span class="sr-only">Toggle navigation</span>
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+          </button>
+        </div>
+        <div class="collapse navbar-collapse">
+         <ul class="nav navbar-nav navbar-right">
+            <li>
+              <a href="">
+                <p>FUNCIONARIO</p>
+              </a>
+            </li>
+            <li class="dropdown">
+              <a href="#" class="dropdown-toggle" data-toggle="dropdown">
+                <p>
+                  LOGIN
+                  <b class="caret"></b>
+                </p>
+              </a>
+              <ul class="dropdown-menu">
+                <li><a href="#">Action</a></li>
+                <li><a href="#">Another action</a></li>
+                <li><a href="#">Something</a></li>
+                <li><a href="#">Another action</a></li>
+                <li><a href="#">Something</a></li>
+                <li class="divider"></li>
+                <li><a href="#">Separated link</a></li>
+              </ul>
+            </li>
+            <li>
+              <a href="#">
+                <p>LOG OUT</p>
+              </a>
+            </li>
+            <li class="separator hidden-lg hidden-md"></li>
+          </ul>
+        </div>
+      </div>
+    </nav>
+
+
+@yield('content')
 
   </div>
 </div>
 
-<footer class="container-fluid text-center">
-  <p>CUSTODE</p>
-</footer>
 
 </body>
+
+<!--   Core JS Files   -->
+<script src="js/jquery-1.10.2.js" type="text/javascript"></script>
+<script src="js/bootstrap.min.js" type="text/javascript"></script>
+
+<!--  Checkbox, Radio & Switch Plugins -->
+<script src="js/bootstrap-checkbox-radio-switch.js"></script>
+
+<!--  Charts Plugin -->
+<script src="js/chartist.min.js"></script>
+
+<!--  Notifications Plugin    -->
+<script src="js/bootstrap-notify.js"></script>
+
+<!--  Google Maps Plugin    -->
+<script type="text/javascript" src="https://maps.googleapis.com/maps/api/js?sensor=false"></script>
+
+<!-- Light Bootstrap Table Core javascript and methods for Demo purpose -->
+<script src="js/light-bootstrap-dashboard.js"></script>
+
+<!-- Light Bootstrap Table DEMO methods, don't include it in your project! -->
+<script src="js/demo.js"></script>
+
+<script type="text/javascript">
+    $(document).ready(function(){
+
+        demo.initChartist();
+
+        $.notify({
+            icon: 'pe-7s-gift',
+            message: "Welcome to <b>Light Bootstrap Dashboard</b> - a beautiful freebie for every web developer."
+
+        },{
+            type: 'info',
+            timer: 4000
+        });
+
+    });
+</script>
+
 </html>
