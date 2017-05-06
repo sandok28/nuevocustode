@@ -24,7 +24,7 @@ class CreateIngresosTable extends Migration
             $table->foreign('funcionario_id')->references('id')->on('funcionarios');
 
             $table->integer('puertas_id')->unsigned();
-            $table->foreign('puertas_id')->references('id')->on('puertas');
+            $table->foreign('puertas_id')->references('id')->on('Puertas');
         });
     }
 

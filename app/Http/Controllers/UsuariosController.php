@@ -24,7 +24,7 @@ class UsuariosController extends Controller
      */
     public function create()
     {
-        return view('usuario.create');
+        return view('Usuario.create');
     }
     /**
      * Store a newly created resource in storage.
@@ -40,7 +40,7 @@ class UsuariosController extends Controller
             'contrasena'=> bcrypt($request['password']),
         ]);
 
-        return "usuario Registrado";
+        return "Usuario Registrado";
     }
     /**
      * Display the specified resource.

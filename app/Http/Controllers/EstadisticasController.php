@@ -9,6 +9,6 @@ class EstadisticasController extends Controller
 {
     public function vistaEstadisticas()
     {
-        return view('estadisticas.vistaEstadisticas');
+        return view('Estadisticas.vistaEstadisticas');
     }
 }

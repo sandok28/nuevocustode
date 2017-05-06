@@ -1,211 +1,450 @@
-<!doctype html>
-<html lang="en">
+<!DOCTYPE html>
+<!--[if lt IE 7]>      <html class="no-js lt-ie9 lt-ie8 lt-ie7"> <![endif]-->
+<!--[if IE 7]>         <html class="no-js lt-ie9 lt-ie8"> <![endif]-->
+<!--[if IE 8]>         <html class="no-js lt-ie9"> <![endif]-->
+<!--[if gt IE 8]><!-->
+<html class="no-js">
+<!--<![endif]-->
+
 <head>
-  <meta charset="utf-8" />
-  <link rel="icon" type="image/png" href="img/favicon.ico">
-  <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1" />
-
-  <title>Light Bootstrap Dashboard by Creative Tim</title>
-
-  <meta content='width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0' name='viewport' />
-  <meta name="viewport" content="width=device-width" />
-
-
-  <!-- Bootstrap core CSS     -->
-  <link href="css/bootstrap.min.css" rel="stylesheet" />
-
-  <!-- Animation library for notifications   -->
-  <link href="css/animate.min.css" rel="stylesheet"/>
-
-  <!--  Light Bootstrap Table core CSS    -->
-  <link href="css/light-bootstrap-dashboard.css" rel="stylesheet"/>
-
-
-  <!--  CSS for Demo Purpose, don't include it in your project     -->
-  <link href="css/demo.css" rel="stylesheet" />
-
-
-  <!--     Fonts and icons     -->
-  <link href="http://maxcdn.bootstrapcdn.com/font-awesome/4.2.0/css/font-awesome.min.css" rel="stylesheet">
-  <link href='http://fonts.googleapis.com/css?family=Roboto:400,700,300' rel='stylesheet' type='text/css'>
-  <link href="css/pe-icon-7-stroke.css" rel="stylesheet" />
-
+    {!! Html::style('') !!}
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title>SpaceLab</title>
+    <meta name="description" content="">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no" />
+    <!-- Favicon -->
+    <link rel="shortcut icon" href="assets/img/favicon.ico" type="image/x-icon">
+    <!-- Bootstrap core CSS -->
+    {!! Html::style('assets/plugins/bootstrap/css/bootstrap.min.css') !!}
+    <!-- Fonts from Font Awsome -->
+    {!! Html::style('assets/css/font-awesome.min.css') !!}
+    <!-- CSS Animate -->
+    {!! Html::style('ssets/css/animate.css') !!}
+    <!-- Custom styles for this theme -->
+    {!! Html::style('assets/css/main.css') !!}
+    <!-- Vector Map  -->
+    {!! Html::style('assets/plugins/jvectormap/css/jquery-jvectormap-1.2.2.css') !!}
+    <!-- ToDos  -->
+    {!! Html::style('assets/plugins/todo/css/todos.css') !!}
+    <!-- Morris  -->
+    {!! Html::style('assets/plugins/morris/css/morris.css') !!}
+    <!-- Fonts -->
+    {!! Html::style('ssets/css/googleapiesSourceSansPro.css') !!}
+    {!! Html::style('ssets/css/googleapisOpenSans.css') !!}
+    <!-- Feature detection -->
+    {!! Html::style('assets/js/modernizr-2.6.2.min.js') !!}
+    <!-- HTML5 shim and Respond.js IE8 support of HTML5 elements and media queries -->
+    <!--[if lt IE 9]>
+    {!! Html::style('assets/js/html5shiv.js') !!}
+    {!! Html::style('assets/js/respond.min.js') !!}
+    <![endif]-->
 </head>
+
 <body>
-
-<div class="wrapper">
-  <div class="sidebar" data-color="AZURE" data-image="img/sidebar-5.jpg">
-
-    <!--
-
-        Tip 1: you can change the color of the sidebar using: data-color="blue | azure | green | orange | red | purple"
-        Tip 2: you can also add an image using data-image tag
-
-    -->
-
-    <div class="sidebar-wrapper">
-      <div class="logo">
-        <a href="" class="simple-text">
-          CUSTODE
-        </a>
-      </div>
-
-      <ul class="nav">
-        <li>
-          <a href="/Funcionarios">
-            <i class="pe-7s-user"></i>
-            <p>INVITADOS</p>
-          </a>
-        <li>
-          <a href="typography.html">
-            <i class="pe-7s-user"></i>
-            <p>FUNCIONARIOS</p>
-          </a>
-        </li>
-        <li>
-          <a href="table.html">
-            <i class="pe-7s-door-lock"></i>
-            <p>PUERTAS</p>
-          </a>
-        </li>
-        <li>
-          <a href="maps.html">
-            <i class="pe-7s-plus"></i>
-            <p>PERMISOS</p>
-          </a>
-        </li>
-        <li>
-          <a href="notifications.html">
-            <i class="pe-7s-clock"></i>
-            <p>ASIGNACIÓN DE HORARIOS</p>
-          </a>
-        </li>
-        <li>
-          <a href="icons.html">
-            <i class="pe-7s-menu"></i>
-            <p>GESTION DE AREAS</p>
-          </a>
-        </li>
-        <li>
-          <a href="notifications.html">
-            <i class="pe-7s-menu"></i>
-            <p>GESTION DE USUARIOS</p>
-          </a>
-        </li>
-        <li>
-          <a href="notifications.html">
-            <i class="pe-7s-menu"></i>
-            <p>GESTION DE INVITADOS</p>
-          </a>
-        </li>
-        <li class="active">
-          <a href="/estadisticas">
-            <i class="pe-7s-graph"></i>
-            <p>ESTADISTICAS</p>
-          </a>
-        </li>
-        <li>
-          <a href="notifications.html">
-            <i class="pe-7s-bell"></i>
-            <p>AUDITORIAS</p>
-          </a>
-        </li>
-      </ul>
-    </div>
-  </div>
-
-  <div class="main-panel">
-    <nav class="navbar navbar-default navbar-fixed">
-      <div class="container-fluid">
-        <div class="navbar-header">
-          <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#navigation-example-2">
-            <span class="sr-only">Toggle navigation</span>
-            <span class="icon-bar"></span>
-            <span class="icon-bar"></span>
-            <span class="icon-bar"></span>
-          </button>
+<section id="container">
+    <header id="header">
+        <!--logo start-->
+        <div class="brand">
+            <a href="index.html" class="logo"><span>Space</span>Lab</a>
         </div>
-        <div class="collapse navbar-collapse">
-         <ul class="nav navbar-nav navbar-right">
-            <li>
-              <a href="">
-                <p>FUNCIONARIO</p>
-              </a>
-            </li>
-            <li class="dropdown">
-              <a href="#" class="dropdown-toggle" data-toggle="dropdown">
-                <p>
-                  LOGIN
-                  <b class="caret"></b>
-                </p>
-              </a>
-              <ul class="dropdown-menu">
-                <li><a href="#">Action</a></li>
-                <li><a href="#">Another action</a></li>
-                <li><a href="#">Something</a></li>
-                <li><a href="#">Another action</a></li>
-                <li><a href="#">Something</a></li>
-                <li class="divider"></li>
-                <li><a href="#">Separated link</a></li>
-              </ul>
-            </li>
-            <li>
-              <a href="#">
-                <p>LOG OUT</p>
-              </a>
-            </li>
-            <li class="separator hidden-lg hidden-md"></li>
-          </ul>
+        <!--logo end-->
+        <div class="toggle-navigation toggle-left">
+            <button type="button" class="btn btn-default" id="toggle-left" data-toggle="tooltip" data-placement="right" title="Toggle Navigation">
+                <i class="fa fa-bars"></i>
+            </button>
         </div>
-      </div>
-    </nav>
+        <div class="user-nav">
+            <ul>
+                <li class="dropdown messages">
+                    <span class="badge badge-danager animated bounceIn" id="new-messages">5</span>
+                    <button type="button" class="btn btn-default dropdown-toggle options" id="toggle-mail" data-toggle="dropdown">
+                        <i class="fa fa-envelope"></i>
+                    </button>
+                    <ul class="dropdown-menu alert animated fadeInDown">
+                        <li>
+                            <h1>You have <strong>5</strong> new messages</h1>
+                        </li>
+                        <li>
+                            <a href="#">
+                                <div class="profile-photo">
+                                    <img src="assets/img/avatar.gif" alt="" class="img-circle">
+                                </div>
+                                <div class="message-info">
+                                    <span class="sender">James Bagian</span>
+                                    <span class="time">30 mins</span>
+                                    <div class="message-content">Lorem ipsum dolor sit amet, elit rutrum felis sed erat augue fusce...</div>
+                                </div>
+                            </a>
+                        </li>
 
+                        <li>
+                            <a href="#">
+                                <div class="profile-photo">
+                                    <img src="assets/img/avatar1.gif" alt="" class="img-circle">
+                                </div>
+                                <div class="message-info">
+                                    <span class="sender">Jeffrey Ashby</span>
+                                    <span class="time">2 hour</span>
+                                    <div class="message-content">hendrerit pellentesque, iure tincidunt, faucibus vitae dolor aliquam...</div>
+                                </div>
+                            </a>
+                        </li>
 
-@yield('content')
+                        <li>
+                            <a href="#">
+                                <div class="profile-photo">
+                                    <img src="assets/img/avatar2.gif" alt="" class="img-circle">
+                                </div>
+                                <div class="message-info">
+                                    <span class="sender">John Douey</span>
+                                    <span class="time">3 hours</span>
+                                    <div class="message-content">Penatibus suspendisse sit pellentesque eu accumsan condimentum nec...</div>
+                                </div>
+                            </a>
+                        </li>
 
-  </div>
-</div>
+                        <li>
+                            <a href="#">
+                                <div class="profile-photo">
+                                    <img src="assets/img/avatar3.gif" alt="" class="img-circle">
+                                </div>
+                                <div class="message-info">
+                                    <span class="sender">Ellen Baker</span>
+                                    <span class="time">7 hours</span>
+                                    <div class="message-content">Sem dapibus in, orci bibendum faucibus tellus, justo arcu...</div>
+                                </div>
+                            </a>
+                        </li>
+                        <li>
+                            <a href="#">
+                                <div class="profile-photo">
+                                    <img src="assets/img/avatar4.gif" alt="" class="img-circle">
+                                </div>
+                                <div class="message-info">
+                                    <span class="sender">Ivan Bella</span>
+                                    <span class="time">6 hours</span>
+                                    <div class="message-content">Curabitur metus faucibus sapien elit, ante molestie sapien...</div>
+                                </div>
+                            </a>
+                        </li>
+                        <li><a href="#">Check all messages <i class="fa fa-angle-right"></i></a>
+                        </li>
+                    </ul>
 
+                </li>
+                <li class="profile-photo">
+                    <img src="assets/img/avatar.png" alt="" class="img-circle">
+                </li>
+                <li class="dropdown settings">
+                    <a class="dropdown-toggle" data-toggle="dropdown" href="#">
+                        Mike Adams <i class="fa fa-angle-down"></i>
+                    </a>
+                    <ul class="dropdown-menu animated fadeInDown">
+                        <li>
+                            <a href="#"><i class="fa fa-user"></i> Profile</a>
+                        </li>
+                        <li>
+                            <a href="#"><i class="fa fa-calendar"></i> Calendar</a>
+                        </li>
+                        <li>
+                            <a href="#"><i class="fa fa-envelope"></i> Inbox <span class="badge badge-danager" id="user-inbox">5</span></a>
+                        </li>
+                        <li>
+                            <a href="#"><i class="fa fa-power-off"></i> Logout</a>
+                        </li>
+                    </ul>
+                </li>
+                <li>
+                    <div class="toggle-navigation toggle-right">
+                        <button type="button" class="btn btn-default" id="toggle-right">
+                            <i class="fa fa-comment"></i>
+                        </button>
+                    </div>
+                </li>
 
-</body>
+            </ul>
+        </div>
+    </header>
+    <!--sidebar left start-->
+    <aside class="sidebar">
+        <div id="leftside-navigation" class="nano">
+            <ul class="nano-content">
+                <li class="active">
+                    <a href="index.html"><i class="fa fa-dashboard"></i><span>Dashboard</span></a>
+                </li>
+                <li class="sub-menu">
+                    <a href="javascript:void(0);"><i class="fa fa-cogs"></i><span>UI Elements</span><i class="arrow fa fa-angle-right pull-right"></i></a>
+                    <ul>
 
-<!--   Core JS Files   -->
-<script src="js/jquery-1.10.2.js" type="text/javascript"></script>
-<script src="js/bootstrap.min.js" type="text/javascript"></script>
+                        <li><a href="ui-alerts-notifications.html">Alerts &amp; Notifications</a>
+                        </li>
+                        <li><a href="ui-panels.html">Panels</a>
+                        </li>
+                        <li><a href="ui-buttons.html">Buttons</a>
+                        </li>
+                        <li><a href="ui-slider-progress.html">Sliders &amp; Progress</a>
+                        </li>
+                        <li><a href="ui-modals-popups.html">Modals &amp; Popups</a>
+                        </li>
+                        <li><a href="ui-icons.html">Icons</a>
+                        </li>
+                        <li><a href="ui-grid.html">Grid</a>
+                        </li>
+                        <li><a href="ui-tabs-accordions.html">Tabs &amp; Accordions</a>
+                        </li>
+                        <li><a href="ui-nestable-list.html">Nestable Lists</a>
+                        </li>
+                    </ul>
+                </li>
+                <li class="sub-menu">
+                    <a href="javascript:void(0);"><i class="fa fa-table"></i><span>Tables</span><i class="arrow fa fa-angle-right pull-right"></i></a>
+                    <ul>
+                        <li><a href="tables-basic.html">Basic Tables</a>
+                        </li>
+                        <li><a href="tables-data.html">Data Tables</a>
+                        </li>
+                    </ul>
+                </li>
+                <li class="sub-menu">
+                    <a href="javascript:void(0);"><i class="fa fa fa-tasks"></i><span>Forms</span><i class="arrow fa fa-angle-right pull-right"></i></a>
+                    <ul>
+                        <li><a href="forms-components.html">Components</a>
+                        </li>
+                        <li><a href="forms-validation.html">Validation</a>
+                        </li>
+                        <li><a href="forms-mask.html">Mask</a>
+                        </li>
+                        <li><a href="forms-wizard.html">Wizard</a>
+                        </li>
+                        <li><a href="forms-multiple-file.html">Multiple File Upload</a>
+                        </li>
+                        <li><a href="forms-wysiwyg.html">WYSIWYG Editor</a>
+                        </li>
+                    </ul>
+                </li>
+                <li class="sub-menu">
+                    <a href="javascript:void(0);"><i class="fa fa-envelope"></i><span>Mail</span><i class="arrow fa fa-angle-right pull-right"></i></a>
+                    <ul>
+                        <li><a href="mail-inbox.html">Inbox</a>
+                        </li>
+                        <li><a href="mail-compose.html">Compose Mail</a>
+                        </li>
+                    </ul>
+                </li>
+                <li class="sub-menu">
+                    <a href="javascript:void(0);"><i class="fa fa-bar-chart-o"></i><span>Charts</span><i class="arrow fa fa-angle-right pull-right"></i></a>
+                    <ul>
+                        <li><a href="charts-chartjs.html">Chartjs</a>
+                        </li>
+                        <li><a href="charts-morris.html">Morris</a>
+                        </li>
+                        <li><a href="charts-c3.html">C3 Charts</a></li>
+                    </ul>
+                </li>
+                <li class="sub-menu">
+                    <a href="javascript:void(0);"><i class="fa fa-map-marker"></i><span>Maps</span><i class="arrow fa fa-angle-right pull-right"></i></a>
+                    <ul>
+                        <li><a href="map-google.html">Google Map</a>
+                        </li>
+                        <li><a href="map-vector.html">Vector Map</a>
+                        </li>
+                    </ul>
+                </li>
+                <li class="sub-menu">
+                    <a href="typography.html"><i class="fa fa-text-height"></i><span>Typography</span></a>
+                </li>
+                <li class="sub-menu">
+                    <a href="javascript:void(0);"><i class="fa fa-file"></i><span>Pages</span><i class="arrow fa fa-angle-right pull-right"></i></a>
+                    <ul>
+                        <li><a href="pages-blank.html">Blank Page</a>
+                        </li>
+                        <li><a href="pages-login.html">Login</a>
+                        </li>
+                        <li><a href="pages-sign-up.html">Sign Up</a>
+                        </li>
+                        <li><a href="pages-calendar.html">Calendar</a>
+                        </li>
+                        <li><a href="pages-timeline.html">Timeline</a>
+                        </li>
+                        <li><a href="pages-404.html">404</a>
+                        </li>
+                        <li><a href="pages-500.html">500</a>
+                        </li>
+                    </ul>
+                </li>
+            </ul>
+        </div>
 
-<!--  Checkbox, Radio & Switch Plugins -->
-<script src="js/bootstrap-checkbox-radio-switch.js"></script>
+    </aside>
+    <!--sidebar left end-->
+    <!--main content start-->
+    <section class="main-content-wrapper">
+        <section id="main-content">
+            <!--tiles start-->
 
-<!--  Charts Plugin -->
-<script src="js/chartist.min.js"></script>
+            <!--aca primer corte-->
+            <!--tiles end-->
+            <!--dashboard charts and map start-->
+            <div class="row">
+                <div class="col-md-12">
+                    <div class="panel panel-default">
+                        <div class="panel-heading">
+                            <h3 class="panel-title">TITULO</h3>
+                            <div class="actions pull-right">
+                                <i class="fa fa-chevron-down"></i>
+                                <i class="fa fa-times"></i>
+                            </div>
+                        </div>
+                        <div class="panel-body">
+                            @yield('content')
+                        </div>
+                    </div>
+                </div>
+                <!--segundo corte-->
+            </div>
+        </section>
+    </section>
+    <!--main content end-->
+    <!--sidebar right start-->
+    <aside class="sidebarRight">
+        <div id="rightside-navigation ">
+            <div class="sidebar-heading"><i class="fa fa-user"></i> Contacts</div>
+            <div class="sidebar-title">online</div>
+            <div class="list-contacts">
+                <a href="javascript:void(0)" class="list-item">
+                    <div class="list-item-image">
+                        <img src="assets/img/avatar.gif" class="img-circle">
+                    </div>
+                    <div class="list-item-content">
+                        <h4>James Bagian</h4>
+                        <p>Los Angeles, CA</p>
+                    </div>
+                    <div class="item-status item-status-online"></div>
+                </a>
+                <a href="javascript:void(0)" class="list-item">
+                    <div class="list-item-image">
+                        <img src="assets/img/avatar1.gif" class="img-circle">
+                    </div>
+                    <div class="list-item-content">
+                        <h4>Jeffrey Ashby</h4>
+                        <p>New York, NY</p>
+                    </div>
+                    <div class="item-status item-status-online"></div>
+                </a>
+                <a href="javascript:void(0)" class="list-item">
+                    <div class="list-item-image">
+                        <img src="assets/img/avatar2.gif" class="img-circle">
+                    </div>
+                    <div class="list-item-content">
+                        <h4>John Douey</h4>
+                        <p>Dallas, TX</p>
+                    </div>
+                    <div class="item-status item-status-online"></div>
+                </a>
+                <a href="javascript:void(0)" class="list-item">
+                    <div class="list-item-image">
+                        <img src="assets/img/avatar3.gif" class="img-circle">
+                    </div>
+                    <div class="list-item-content">
+                        <h4>Ellen Baker</h4>
+                        <p>London</p>
+                    </div>
+                    <div class="item-status item-status-away"></div>
+                </a>
+            </div>
 
-<!--  Notifications Plugin    -->
-<script src="js/bootstrap-notify.js"></script>
-
-<!--  Google Maps Plugin    -->
-<script type="text/javascript" src="https://maps.googleapis.com/maps/api/js?sensor=false"></script>
-
-<!-- Light Bootstrap Table Core javascript and methods for Demo purpose -->
-<script src="js/light-bootstrap-dashboard.js"></script>
-
-<!-- Light Bootstrap Table DEMO methods, don't include it in your project! -->
-<script src="js/demo.js"></script>
-
-<script type="text/javascript">
-    $(document).ready(function(){
-
-        demo.initChartist();
-
-        $.notify({
-            icon: 'pe-7s-gift',
-            message: "Welcome to <b>Light Bootstrap Dashboard</b> - a beautiful freebie for every web developer."
-
-        },{
-            type: 'info',
-            timer: 4000
-        });
-
+            <div class="sidebar-title">offline</div>
+            <div class="list-contacts">
+                <a href="javascript:void(0)" class="list-item">
+                    <div class="list-item-image">
+                        <img src="assets/img/avatar4.gif" class="img-circle">
+                    </div>
+                    <div class="list-item-content">
+                        <h4>Ivan Bella</h4>
+                        <p>Tokyo, Japan</p>
+                    </div>
+                    <div class="item-status"></div>
+                </a>
+                <a href="javascript:void(0)" class="list-item">
+                    <div class="list-item-image">
+                        <img src="assets/img/avatar5.gif" class="img-circle">
+                    </div>
+                    <div class="list-item-content">
+                        <h4>Gerald Carr</h4>
+                        <p>Seattle, WA</p>
+                    </div>
+                    <div class="item-status"></div>
+                </a>
+                <a href="javascript:void(0)" class="list-item">
+                    <div class="list-item-image">
+                        <img src="assets/img/avatar6.gif" class="img-circle">
+                    </div>
+                    <div class="list-item-content">
+                        <h4>Viktor Gorbatko</h4>
+                        <p>Palo Alto, CA</p>
+                    </div>
+                    <div class="item-status"></div>
+                </a>
+            </div>
+        </div>
+    </aside>
+    <!--sidebar right end-->
+</section>
+<!--Global JS-->
+{!! Html::script('assets/js/jquery-1.10.2.min.js') !!}
+{!! Html::script('assets/plugins/bootstrap/js/bootstrap.min.js') !!}
+{!! Html::script('assets/plugins/waypoints/waypoints.min.js') !!}
+{!! Html::script('assets/js/application.js') !!}
+<!--Page Level JS-->
+{!! Html::script('assets/plugins/countTo/jquery.countTo.js') !!}
+{!! Html::script('') !!}
+<!-- FlotCharts  -->
+{!! Html::script('assets/plugins/flot/js/jquery.flot.min.js') !!}
+{!! Html::script('assets/plugins/flot/js/jquery.flot.resize.min.js') !!}
+{!! Html::script('assets/plugins/flot/js/jquery.flot.canvas.min.js') !!}
+{!! Html::script('assets/plugins/flot/js/jquery.flot.image.min.js') !!}
+{!! Html::script('assets/plugins/flot/js/jquery.flot.categories.min.js') !!}
+{!! Html::script('assets/plugins/flot/js/jquery.flot.crosshair.min.js') !!}
+{!! Html::script('assets/plugins/flot/js/jquery.flot.errorbars.min.js') !!}
+{!! Html::script('assets/plugins/flot/js/jquery.flot.fillbetween.min.js') !!}
+{!! Html::script('assets/plugins/flot/js/jquery.flot.navigate.min.js') !!}
+{!! Html::script('assets/plugins/flot/js/jquery.flot.pie.min.js') !!}
+{!! Html::script('assets/plugins/flot/js/jquery.flot.selection.min.js') !!}
+{!! Html::script('assets/plugins/flot/js/jquery.flot.stack.min.js') !!}
+{!! Html::script('assets/plugins/flot/js/jquery.flot.symbol.min.js') !!}
+{!! Html::script('assets/plugins/flot/js/jquery.flot.threshold.min.js') !!}
+{!! Html::script('assets/plugins/flot/js/jquery.colorhelpers.min.js') !!}
+{!! Html::script('assets/plugins/flot/js/jquery.flot.time.min.js') !!}
+{!! Html::script('assets/plugins/flot/js/jquery.flot.example.js') !!}
+<!-- Morris  -->
+{!! Html::script('assets/plugins/morris/js/morris.min.js') !!}
+{!! Html::script('assets/plugins/morris/js/raphael.2.1.0.min.js') !!}
+<!-- Vector Map  -->
+{!! Html::script('assets/plugins/jvectormap/js/jquery-jvectormap-1.2.2.min.js') !!}
+{!! Html::script('assets/plugins/jvectormap/js/jquery-jvectormap-world-mill-en.js') !!}
+<!-- ToDo List  -->
+{!! Html::script('assets/plugins/todo/js/todos.js') !!}
+<!--Load these page level functions-->
+<script>
+    $(document).ready(function() {
+        app.timer();
+        app.map();
+        app.weather();
+        app.morrisPie();
     });
 </script>
+<script>
+    (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+            (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+        m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+    })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
+
+    ga('create', 'UA-46627904-1', 'authenticgoods.co');
+    ga('send', 'pageview');
+
+</script>
+
+</body>
 
 </html>

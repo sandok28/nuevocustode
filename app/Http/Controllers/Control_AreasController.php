@@ -10,6 +10,6 @@ class Control_AreasController extends Controller
     public function controlareas()
     {
         $puertas = \App\Puerta::All();
-        return view('control_areas.vistaControlAreas',compact('puertas'));
+        return view('Control_Areas.vistaControlAreas',compact('puertas'));
     }
 }

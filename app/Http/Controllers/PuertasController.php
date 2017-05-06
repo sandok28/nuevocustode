@@ -16,16 +16,16 @@ class PuertasController extends Controller
     public function vistaPuertas()
     {
         $puertas = Puerta::All();
-       return view('puertas.vistaPuertas',compact('puertas'));
+       return view('Puertas.vistaPuertas',compact('puertas'));
     }
     public function crear()
     {
-       return view('puertas.crear');
+       return view('Puertas.crear');
     }
 
     public function actualizar()
     {
-        return view('puertas.actualizar');
+        return view('Puertas.actualizar');
     }
     public function store(Request $request)
     {
@@ -40,7 +40,7 @@ class PuertasController extends Controller
     public function edit($id)
     {
         $puerta=Puerta::find($id);
-        return view('puertas.actualizar',['puerta'=>$puerta]);
+        return view('Puertas.actualizar',['puerta'=>$puerta]);
     }
 
     public function update($id,Request $request)
