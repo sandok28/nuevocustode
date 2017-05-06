@@ -79,7 +79,7 @@
 
             <div class="text-left  ">
                 <div class="text-left">
-                    Cambiando cosashhhhhhh
+                    Cambiando cosashhhhhhh otra cosa mas
                 </div>
 
                 <div class="links">
