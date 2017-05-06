@@ -21,7 +21,7 @@ class CreateHorariosInvitadosTable extends Migration
             $table->integer('invitados_id')->unsigned();
             $table->foreign('invitados_id')->references('id')->on('invitados');
             $table->integer('puertas_id')->unsigned();
-            $table->foreign('puertas_id')->references('id')->on('puertas');
+            $table->foreign('puertas_id')->references('id')->on('Puertas');
         });
     }
 

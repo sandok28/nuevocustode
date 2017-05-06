@@ -21,7 +21,7 @@ class CreateSeccionesPuertasTable extends Migration
             $table->foreign('seccions_id')->references('id')->on('seccions');
 
             $table->integer('puertas_id')->unsigned();
-            $table->foreign('puertas_id')->references('id')->on('puertas');
+            $table->foreign('puertas_id')->references('id')->on('Puertas');
         });
     }
 
