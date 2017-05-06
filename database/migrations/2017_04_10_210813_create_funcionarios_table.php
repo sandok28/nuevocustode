@@ -26,6 +26,7 @@ class CreateFuncionariosTable extends Migration
             $table->boolean('dado_de_baja');
             $table->boolean('licencia');
             $table->String('tarjeta_rfid');
+            $table->integer('estatus');
             $table->timestamps();
 
             $table->integer('cargos_id')->unsigned();

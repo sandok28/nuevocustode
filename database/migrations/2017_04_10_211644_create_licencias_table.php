@@ -17,6 +17,7 @@ class CreateLicenciasTable extends Migration
             $table->increments('id');
             $table->date('desde');
             $table->date('hasta');
+            $table->integer('estatus');
             $table->timestamps();
 
             $table->integer('funcionario_id')->unsigned();

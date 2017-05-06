@@ -16,6 +16,7 @@ class CreateCargosTable extends Migration
         Schema::create('cargos', function (Blueprint $table) {
             $table->increments('id');
             $table->String('nombre');
+            $table->integer('estatus');
             $table->timestamps();
 
             $table->integer('secciones_id')->unsigned();//llave foranea

@@ -58,10 +58,10 @@
     </div>
     <div class="collapse navbar-collapse" id="myNavbar">
       <ul class="nav navbar-nav navbar-right">
-          <a class="navbar-brand" href="#">Funcionario</a>
+          <a class="navbar-brand" href="#">{!! Auth::User()->name !!}</a>
           <li style="width: 50px; height: 50px; border: 3px solid white;"></li>
         <li><a href="#"><span class="glyphicon glyphicon-log-in"></span> Login</a></li>
-          <li><a href="#"><span class="glyphicon glyphicon-log-out"></span> Logout</a></li>
+          <li><a href="/logout"><span class="glyphicon glyphicon-log-out"></span> Logout</a></li>
       </ul>
     </div>
   </div>
@@ -86,15 +86,16 @@
     </div>
     <div class="col-sm-8 text-left">
         @yield('content')
-        <p>Lorem</p>
+
     </div>
 
   </div>
 </div>
-
+<!-- Pie de pagina toca quitarlo o pegarlo al fondo mas rato
 <footer class="container-fluid text-center">
-  <p>CUSTODE</p>
+  esto es un comentario <p>CUSTODE</p>
 </footer>
+-->
 
 </body>
 </html>

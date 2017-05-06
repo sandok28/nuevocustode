@@ -10,6 +10,13 @@ class Permiso extends Model implements AuditableContract
 {
     use Auditable;
 
+    protected $fillable = [
+        'nombre','estatus',
+    ];
 
-    //
+    public function users()
+    {
+        return $this->belongsToMany('App\User','permisos_usuarios','usuarios_id');
+
+    }
 }

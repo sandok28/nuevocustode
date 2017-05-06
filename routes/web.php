@@ -12,6 +12,12 @@
 */
 
 
-Route::get('/','IndexController@index');
+Route::get('/home','IndexController@index');
+Route::get('/','LoginHomeController@index');
 Route::get('/Funcionarios','FuncionariosController@vistaFuncionarios');
 Route::resource('usuario','UsuariosController');
+Route::resource('login','LogController');
+Route::get('/logout','LogController@logout');
+
+
+Route::resource('permiso','PermisosController');

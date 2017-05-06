@@ -23,7 +23,7 @@ class CreatePermisosUsuariosTable extends Migration
             $table->foreign('permisos_id')->references('id')->on('permisos');
 
             $table->integer('usuarios_id')->unsigned();
-            $table->foreign('usuarios_id')->references('id')->on('usuarios');
+            $table->foreign('usuarios_id')->references('id')->on('users');
         });
     }
 

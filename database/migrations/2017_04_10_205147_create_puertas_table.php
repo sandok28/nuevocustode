@@ -19,6 +19,7 @@ class CreatePuertasTable extends Migration
             $table->string('nombre');
             $table->integer('llave_rfid');
             $table->string('ip');
+            $table->integer('estatus');
             $table->timestamps();
         });
     }

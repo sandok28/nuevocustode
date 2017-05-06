@@ -15,6 +15,7 @@ class CreateSeccionesPuertasTable extends Migration
     {
         Schema::create('secciones_puertas', function (Blueprint $table) {
             $table->increments('id');
+            $table->integer('estatus');
             $table->timestamps();
 
             $table->integer('seccions_id')->unsigned();

@@ -17,6 +17,7 @@ class CreateUsuariosTable extends Migration
             $table->increments('id');
             $table->String('nombre');
             $table->String('contrasena');
+            $table->integer('estatus');
             $table->timestamps();
         });
     }
