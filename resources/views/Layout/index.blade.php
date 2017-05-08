@@ -276,7 +276,7 @@
             </ul>
         </div>
 
-<<<<<<< HEAD
+
     </div>
     <div class="collapse navbar-collapse" id="myNavbar">
       <ul class="nav navbar-nav navbar-right">

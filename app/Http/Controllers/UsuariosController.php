@@ -38,7 +38,7 @@ class UsuariosController extends Controller
      */
     public function create()
     {
-        return view('usuario.create');
+        return view('Usuario.create');
     }
     /**
      * Store a newly created resource in storage.
@@ -56,7 +56,12 @@ class UsuariosController extends Controller
             'estatus'=> '1',
         ]);
 
+
         return redirect('/usuario')->with('message','El Usuario se ha registrado correctamente');
+
+
+        return "Usuario Registrado";
+
     }
     /**
      * Display the specified resource.
